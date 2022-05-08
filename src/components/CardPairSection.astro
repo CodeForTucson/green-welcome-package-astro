@@ -1,0 +1,21 @@
+---
+const {content} = Astro.props;
+---
+<div class="relative max-w-full mx-auto px-40 py-4 h-full">
+    <div class="flex flex-row flex-wrap w-full my-14">
+        <div class="md:w-1/2 w-1/2">
+            <slot name="content-left" />
+            <!-- <img class="lg:h-48 md:h-36 w-full object-cover object-center scale-90 transition-all duration-400 hover:scale-110" src="https://images.unsplash.com/photo-1631700611307-37dbcb89ef7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIwfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60" alt="blog"> -->
+        </div>
+
+        <div class="md:w-1/2 w-1/2">
+            <slot name="content-right" />
+            <!-- <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY-1</h2>
+            <h1 class="title-font text-lg font-medium text-gray-600 mb-3">The Catalyzer</h1>
+            <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+            <div class="flex items-center flex-wrap ">
+                <button class="bg-gradient-to-r from-blue-400 to-green-400 hover:scale-105  shadow-cla-blue px-4 py-1 rounded-lg">Learn more</button>
+            </div> -->
+        </div>
+    </div>
+</div>
