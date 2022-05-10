@@ -5,17 +5,19 @@ import { Markdown } from 'astro/components';
 // 
 const {content} = Astro.props;
 ---
-<style>
-h1 {
+
+<style is:global>
+
+:root .blog-post h1 {
     font-size: 3em;
 }
 
-h2 {
+:root .blog-post h2 {
     font-size: 2em;
 }
 </style>
 <BaseLayout content={content}>
-    <div class="px-72 pt-10">
+    <div class="px-72 pt-10 blog-post">
         <h1>{content.title}</h1>
         <small>Author: {content.author}</small>
         <!-- <Markdown> -->
