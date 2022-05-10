@@ -1,11 +1,26 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import { Markdown } from 'astro/components';
+
+// 
 const {content} = Astro.props;
 ---
+<style>
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+</style>
 <BaseLayout content={content}>
     <div class="px-72 pt-10">
         <h1>{content.title}</h1>
-        <h2>Author: {content.author}</h2>
-        <slot />
+        <small>Author: {content.author}</small>
+        <!-- <Markdown> -->
+            <slot />
+        <!-- </Markdown> -->
+        
     </div> 
 </BaseLayout>

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import BlogPostCardPreview from '../components/BlogPostCardPreview.astro';
 const {content} = Astro.props;
 const posts = await Astro.glob('../pages/blog/*.md');
 ---
@@ -7,12 +8,14 @@ const posts = await Astro.glob('../pages/blog/*.md');
     <div class="px-72 pt-10">
 
         {posts.slice(0,10).map((post) => (
-            <article>
-                <h1>{post.frontmatter.title}</h1>
-                <p>{post.frontmatter.date}</p>
-                <a href={post.frontmatter.url}>Read more</a>
-            </article>
-        )) }
+            <BlogPostCardPreview 
+                title={post.frontmatter.title} 
+                date={post.frontmatter.date} 
+                thumbnail={post.frontmatter.thumbnail}
+                description = {post.frontmatter.description}
+                url = {post.url}
+            />
+        ))}
     </div>
     
 </BaseLayout>
