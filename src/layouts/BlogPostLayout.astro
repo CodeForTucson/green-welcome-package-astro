@@ -3,7 +3,9 @@ import BaseLayout from './BaseLayout.astro';
 const {content} = Astro.props;
 ---
 <BaseLayout content={content}>
-    <h1>{content.title}</h1>
-    <h2>Author: {content.author}</h2>
-    <slot />
+    <div class="px-72 pt-10">
+        <h1>{content.title}</h1>
+        <h2>Author: {content.author}</h2>
+        <slot />
+    </div> 
 </BaseLayout>
