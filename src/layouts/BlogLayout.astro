@@ -5,8 +5,8 @@ const {content} = Astro.props;
 const posts = await Astro.glob('../pages/blog/*.md');
 ---
 <BaseLayout content={content}>
-    <div class="px-72 pt-10">
-
+    <div class="px-72 pt-10 blogPage">
+        <h1 class="text-center">Blog</h1>
         {posts.slice(0,10).map((post) => (
             <BlogPostCardPreview 
                 title={post.frontmatter.title} 
