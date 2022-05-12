@@ -1,0 +1,17 @@
+---
+export interface Props {
+    title: string;
+    description?: string;
+    image?: string;
+    link?: string;
+}
+const {title, description="", link="/", image="images/uploads/draw1.jpg"} = Astro.props;
+---
+<div class="mx-auto flex w-96 flex-col justify-center bg-white rounded-2xl shadow-xl">
+    <img class="aspect-video w-96 rounded-t-2xl object-cover object-center" src={image} />
+    <div class="p-4">
+        <h1 class="text-2xl font-medium text-slate-600 pb-2">{title}</h1>
+        <p class="text-sm tracking-tight font-light text-slate-400 leading-6">{description}</p>
+        <a href={link}>Read more</a>
+    </div>
+</div>

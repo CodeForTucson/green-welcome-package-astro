@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CardPreview from '../components/CardPreview.astro';
+const content = {
+    title: 'Green Infrastructure',
+}
+---
+<BaseLayout content={content}>
+
+    <div class="subPage px-72 pt-10">
+    <h1 class="text-center">Green Infrastructure</h1>
+        <h2 class="text-center py-4">Rainwater Harvesting</h2>
+        <div class="flex flex-row m-2">
+            <CardPreview title="Curb Cutting"></CardPreview>
+            <CardPreview title="Mulch"></CardPreview>
+            <CardPreview title="Drought-tolerant Plants"></CardPreview>
+        </div>
+        <div class="flex flex-row m-2">
+            <CardPreview title="Basins"></CardPreview>
+            <CardPreview title="Oyas"></CardPreview>
+            <CardPreview title="Rainwater storage"></CardPreview>
+        </div>
+
+        <h2 class="text-center py-4">Grey Water</h2>
+        <div class="flex flex-row m-2 justify-items-start	">
+            <CardPreview title="Washing Machine"></CardPreview>
+            <CardPreview title="Shower Drainage"></CardPreview>
+        </div>
+        <h2 class="text-center py-4">Solar Energy</h2>
+        <div class="flex flex-row m-2">
+            <CardPreview title="Solar Panels"></CardPreview>
+            <CardPreview title="Outdoor Solar Ovens"></CardPreview>
+        </div>
+    </div>
+</BaseLayout>

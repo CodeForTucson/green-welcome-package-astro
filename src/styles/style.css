@@ -25,10 +25,10 @@ h2 {
     font-size: 2em;
 }
 
-:root .blogPage > h1, .blogPost > h1, .eventPage > h1, .contactPage > h1, .aboutPage > h1, .resourcesPage > h1 {
+:root .subPage > h1 {
     font-size: 3em;
 }
 
-:root .blogPage > h2, .blogPost > h2, .eventPage > h2, .contactPage > h2, .aboutPage > h2, .resourcesPage > h2 {
+:root .subPage > h2 {
     font-size: 2em;
 }
