@@ -7,15 +7,18 @@ const posts = await Astro.glob('../pages/blog/*.md');
 <BaseLayout content={content}>
     <div class="px-72 pt-10 subPage">
         <h1 class="text-center">Blog</h1>
-        {posts.slice(0,10).map((post) => (
-            <BlogPostCardPreview 
-                title={post.frontmatter.title} 
-                date={post.frontmatter.date} 
-                thumbnail={post.frontmatter.thumbnail}
-                description = {post.frontmatter.description}
-                url = {post.url}
-            />
-        ))}
+            <div class="grid grid-cols-3 gap-2">
+                {posts.slice(0,10).map((post) => (
+                    <BlogPostCardPreview 
+                        title={post.frontmatter.title} 
+                        date={post.frontmatter.date} 
+                        thumbnail={post.frontmatter.thumbnail}
+                        description = {post.frontmatter.description}
+                        url = {post.url}
+                    />
+                ))}
+            </div>
+        
     </div>
     
 </BaseLayout>
